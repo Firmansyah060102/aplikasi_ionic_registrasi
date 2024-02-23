@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail Konten</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Detail Konten</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content [class.expanded]="showFullContent">
+      <p>
+        Ini adalah konten yang panjang. Ini adalah contoh deskripsi atau informasi yang dapat panjang.
+        <!-- Tambahkan konten Anda di sini -->
+      </p>
+      <ion-button (click)="toggleContent()">Selengkapnya</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

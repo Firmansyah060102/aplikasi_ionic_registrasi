@@ -1,0 +1,68 @@
+<ion-app>
+  <ion-router-outlet>
+    <ion-app>
+    <ion-menu  side="start" contentId="main">
+      <ion-header >
+        <ion-toolbar>
+          <ion-title >Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item href="/tabs/settings">
+            
+            
+            <ion-icon aria-hidden="true" name="information-circle-outline" ></ion-icon>
+              Informasi
+          </ion-item>
+          
+            
+            <ion-accordion-group>
+              <ion-accordion value="first">
+                <ion-item slot="header" color="light">
+                  <ion-icon name="share-social-outline"></ion-icon>
+                  <ion-label >Contact kami</ion-label>
+                </ion-item>
+                <div class="ion-padding" slot="content" ><ion-item href="https://web.facebook.com/firman.lo.1">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                    Facebook
+                </ion-item>
+                </div>
+                <div class="ion-padding" slot="content" ><ion-item href="https://www.instagram.com/fiirman0601/">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                    Instagram
+                </ion-item>
+                </div>
+                <div class="ion-padding" slot="content" ><ion-item href="https://wa.me/qr/LHCAUYBNW4PJL1">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                    Whatsap
+                </ion-item>
+                </div>
+                </ion-accordion>
+              </ion-accordion-group>
+          
+          
+            <ion-accordion-group>
+              <ion-accordion value="first">
+                <ion-item slot="header" color="light">
+                  <ion-icon name="settings-outline"></ion-icon>
+                  <ion-label >Settings</ion-label>
+                </ion-item>
+                  <div class="ion-padding" slot="content" >
+                    <ion-item>
+                      <ion-toggle
+                        >Dark Mode</ion-toggle
+                      >
+                      </ion-item>
+                </div>
+                
+               
+                </ion-accordion>
+              </ion-accordion-group>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-app></ion-router-outlet>
+</ion-app>

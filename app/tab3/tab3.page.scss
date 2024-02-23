@@ -1,0 +1,29 @@
+ion-card {
+    --background: #a7d4a3;
+    --color: hsl(12, 86%, 48%);
+    
+    img{
+      
+        margin: 35px;
+        margin-left:10px;
+        width: 200px;
+        float: left;
+      
+    
+  }
+  
+  ion-card-title {
+    --color: #000a04;
+    --font-family-base: 'Roboto', sans-serif;
+  }
+
+  ion-card-subtitle {
+    --color: #140606;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  ion-card-header{
+    margin-left: 3x;
+     
+   }
+}
+  

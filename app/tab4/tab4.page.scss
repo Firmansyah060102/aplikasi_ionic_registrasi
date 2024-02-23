@@ -1,0 +1,9 @@
+ion-card {
+    max-width: 400px; /* Sesuaikan lebar card sesuai kebutuhan */
+    margin: auto;
+  }
+  
+  ion-img {
+    width: 100%; /* Agar gambar memenuhi lebar card */
+    height: auto; /* Menghindari distorsi gambar */
+  }

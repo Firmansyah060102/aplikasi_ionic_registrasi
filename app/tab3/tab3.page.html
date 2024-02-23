@@ -1,0 +1,63 @@
+<ion-header >
+  <ion-toolbar bg color="warning">
+    <ion-title color ="light">DATA KARYAWAN</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <!-- <ion-searchbar [(ngModel)]="searchQuery" (ionChange)="search()"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let result of searchResults">
+      {{ result.name }} 
+    </ion-item>
+  </ion-list> -->
+ <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+  <ion-refresher-content
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Refreshing...">
+  </ion-refresher-content>
+</ion-refresher>
+<ion-searchbar placeholder="Search"></ion-searchbar>
+
+
+<ion-card *ngFor="let relawan of relawanList">
+  
+ 
+  <ion-card-header>
+    
+  
+  <ion-card-title><b>{{relawan.nama}}</b></ion-card-title>
+</ion-card-header>
+  <ion-card-header>
+   
+    <ion-card-subtitle ><ion-label style="display: inline-block; width: 100px; text-align: left;">Nohp</ion-label>:{{relawan.nohp}} </ion-card-subtitle>
+    <ion-card-subtitle> <ion-label style="display: inline-block; width: 100px; text-align: left;">Status  </ion-label>: {{relawan.status}} </ion-card-subtitle>
+    <ion-card-subtitle> <ion-label style="display: inline-block; width: 100px; text-align: left;">Gol darah</ion-label>: {{relawan.darah}} </ion-card-subtitle>
+    <ion-card-subtitle> <ion-label style="display: inline-block; width: 100px; text-align: left;">Jabatan </ion-label>: {{relawan.nik}} </ion-card-subtitle>
+    <ion-card-subtitle> <ion-label style="display: inline-block; width: 100px; text-align: left;">Umur    </ion-label>: {{relawan.umur}} Tahun</ion-card-subtitle>
+    <ion-card-subtitle> <ion-label style="display: inline-block; width: 100px; text-align: left;">Alamat  </ion-label>: {{relawan.alamat}} </ion-card-subtitle>
+    <ion-card-subtitle> <ion-label style="display: inline-block; width: 100px; text-align: left;">Jenis kelamin</ion-label>: {{relawan.kelamin}}</ion-card-subtitle>
+    <ion-card-subtitle> <ion-label style="display: inline-block; width: 100px; text-align: left;">Tgl lahir </ion-label>: {{relawan.lahir}} </ion-card-subtitle>
+    <ion-card-subtitle> <ion-label style="display: inline-block; width: 100px; text-align: left;">Agama   </ion-label>: {{relawan.agama}}</ion-card-subtitle>
+  </ion-card-header>
+
+</ion-card>
+
+
+
+
+<ion-infinite-scroll  (ionInfinite)="loadData($event)">
+  <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="Loading more data...">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+</ion-content>

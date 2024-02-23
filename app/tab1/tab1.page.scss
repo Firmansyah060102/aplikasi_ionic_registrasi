@@ -1,0 +1,58 @@
+
+ion-content {
+ 
+  .background{
+    background-image: linear-gradient(rgba(12, 12, 12, 0.432), rgba(1, 5, 1, 0.5)),url('../../assets/icon/container.jpg'); /* Ganti dengan path gambar Anda */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 300px;
+  }
+  .company-profile {
+    transform: translateY(-400px);
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    
+    
+    .company-logo {
+      width: 50px;  // Sesuaikan ukuran logo sesuai kebutuhan
+      height: 50px;
+      border-radius: 5%;
+      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+    .company-details {
+      transform: translateY(-100px);
+      color: rgb(251, 252, 253);
+      }
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        font-family: fantasy;
+        
+
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+  .menu{
+    transform: translateY(-400px);
+    display: flex;
+    justify-content: center;
+    h2 {
+      font-size: 1 em;
+        margin-bottom: 10px;
+        font-family:cursive ;
+        color: rgb(253, 254, 255);
+    }
+
+  }
+  
+}
+
+

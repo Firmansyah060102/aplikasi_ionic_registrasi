@@ -1,0 +1,113 @@
+<ion-header>
+  <ion-toolbar bg color="warning">
+  <ion-title color="light">REGISTRASI KARYAWAN </ion-title>
+  <ion-buttons slot="start">
+  <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+  </ion-toolbar>
+  </ion-header>
+  <ion-content padding>
+  <ion-card class="welcome-card bg-content">
+  <ion-card-header>
+  <ion-card-title color="primary"> REGISTRASI KARYAWAN</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+  <p>Silakan isikan form dibawah untuk pendataan para karyawan.</p>
+  <ion-list>
+  <ion-item>
+  <ion-label position="floating"> NAMA </ion-label>
+  <ion-input type="nama" [(ngModel)]="nama"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> NO HP/WA </ion-label>
+    <ion-input type="nohp" [(ngModel)]="nohp"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label position="floating"> JABATAN/BAGIAN </ion-label>
+    <ion-input type="nik" [(ngModel)]="nik"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label position="floating"> USIA </ion-label>
+    <ion-input type="umur" [(ngModel)]="umur"></ion-input>
+    </ion-item> 
+
+    <ion-item >
+      <ion-label position="floating"> ALAMAT </ion-label>
+      <ion-input type="alamat" [(ngModel)]="alamat" style= "margin-bottom: 60px;"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating"> JENIS KELAMIN </ion-label>
+        <ion-select [(ngModel)]="kelamin" class="popover-content"
+        placeholder="Pilih jenis kelamin">
+        <ion-select-option value="laki-laki">LAKI-LAKI
+        </ion-select-option>
+        <ion-select-option value="perempuan">PEREMPUAN
+        </ion-select-option>
+      </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating"> TANGGAL LAHIR</ion-label>
+        <ion-input type="date" [(ngModel)]="lahir"></ion-input>
+        </ion-item>
+          
+        <ion-item>
+          <ion-label position="floating"> AGAMA </ion-label>
+          <ion-select [(ngModel)]="agama" class="popover-content"
+          placeholder="Pilih agama">
+          <ion-select-option value="Islam">Islam
+          </ion-select-option>
+          <ion-select-option value="Kristen">Kristen
+          </ion-select-option>
+          <ion-select-option value="Hindu">Hindu
+          </ion-select-option>
+          <ion-select-option value="Budha">Budha
+          </ion-select-option>
+          <ion-select-option value="Lainnya">Lainnya
+          </ion-select-option>
+          </ion-select>
+        </ion-item>
+            
+
+
+    <ion-item>
+    <ion-label position="floating"> STATUS </ion-label>
+    <ion-select [(ngModel)]="status" class="popover-content"
+    placeholder="Pilih status">
+    <ion-select-option value="Karyawan tetap">Karyawan tetap
+    </ion-select-option>
+    <ion-select-option value="Karyawan kontrak">Karyawan kontrak
+    </ion-select-option>
+    </ion-select>
+    </ion-item>
+
+    <ion-item>
+    <ion-label position="floating"> GOLONGAN DARAH </ion-label>
+    <ion-select [(ngModel)]="darah" class="popover-content"
+    placeholder="pilih golongan darah">
+    <ion-select-option value="A">A</ion-select-option>
+    <ion-select-option value="B">B</ion-select-option>
+    <ion-select-option value="AB">AB</ion-select-option>
+    <ion-select-option value="O">O</ion-select-option>
+   
+    </ion-select>
+    </ion-item>
+
+    <!--<ion-item>
+      <ion-label position="floating">Unggah File</ion-label>
+      <ion-input type="file" (change)="onFileChange($event)" accept=".pdf, .doc, .docx"></ion-input>
+    </ion-item>-->
+
+    </ion-list>
+    <div padding>
+      <ion-button routerLink="/tabs/tab3" expand="block" color="warning" size="medium"
+      (click)="addRegister()"><ion-icon name="trending-up-outline" ></ion-icon>
+      DAFTAR</ion-button>
+      </div>
+      </ion-card-content>
+      </ion-card>
+      </ion-content>
